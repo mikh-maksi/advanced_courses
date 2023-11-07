@@ -1,0 +1,22 @@
+p{
+    color:gray;
+}
+.menu{
+    display: flex;
+    width: 555px;
+    justify-content: space-around;
+}
+.text{
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.container{
+    width:906px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}

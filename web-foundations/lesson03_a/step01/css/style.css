@@ -1,0 +1,17 @@
+p{
+    color:gray;
+}
+.menu{
+    display: flex;
+    width:906px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.text{
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
