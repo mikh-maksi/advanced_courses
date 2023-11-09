@@ -20,8 +20,9 @@
         b_inpt = document.getElementById("inpt_b");
         act_inpt = document.getElementById("inpt_act");
         btn = document.getElementById("btn");
-        r = document.getElementById("res");
         
+   
+
         btn.addEventListener("click",fnc);
         function fnc(){
             a = parseInt(a_inpt.value);
@@ -39,8 +40,7 @@
             if (act == '/'){
                 c = a/b;
             }
-            r.innerHTML = c;
-            // alert(c);
+            alert(c);
         }
 
 
