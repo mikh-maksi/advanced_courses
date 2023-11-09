@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Header1</h1>
+
+    <button id = "btn">Calc</button>
+    <p id="res"></p>
+
+    <button id = "btn_a">go A</button>
+    <p id="res_a"></p>
+
+
+    <button id = "btn_s">Select</button>
+
+
+
+
+    <!-- Створити нову кнопку із текстом - go 1 -->
+    <!-- Створити новий абзац -->
+
+    <script>
+        btn = document.getElementById("btn"); //отримати нову кнопку в змінну btn1
+        r = document.getElementById("res");  //отримати новий абзац в змінну res1
+
+        btn_a = document.getElementById("btn_a"); //отримати нову кнопку в змінну btn1
+        r_a = document.getElementById("res_a");  //отримати новий абзац в змінну res1
+
+        btn_s = document.getElementById("btn_s"); //отримати нову кнопку в змінну btn1
+
+        
+
+        btn.addEventListener("click",fnc);  //Повісити слухач на нову кнопку, який за кліком запускає функцію fnc1
+        btn_a.addEventListener("click",fnc_c);  //Повісити слухач на нову кнопку, який за кліком запускає функцію fnc1
+        btn_s.addEventListener("click",fnc_s);
+
+        function fnc_c(){
+            r_a.innerHTML="Hello, A World!";
+        }
+
+        function fnc_s(){
+            btn_s.classList.toggle("select");
+            console.log("select");
+        }
+
+        function fnc(){
+            r.innerHTML="Hello, World!";
+        }
+
+        // створити функцію fnc1, яка виводить в новий абзац текст "1".
+    </script>
+</body>
+</html>
