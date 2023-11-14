@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="radius">
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <p id="result"></p>
+    <script>
+        // Зв'язка
+        r = document.getElementById("radius");
+        res = document.getElementById("result");
+
+        // Дія
+        r.addEventListener("change",f);
+    
+        // Функція
+        function f(){
+            r_value = parseInt(r.value);
+
+            p = 2*Math.PI*r_value;
+            s = Math.PI*r_value*r_value;
+
+            str = "Радіус кола: <b>"+r_value+"</b> Периметр кола:  "+p+" Площа кола: "+s;
+
+            res.innerHTML = str;
+        }
+
+    </script>
+
+
+</body>
+</html>
