@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "result"></h1>
+    <p id="odd"></p>
+    <script>
+        a = Math.random(0,10);
+        
+        res = Math.floor(a*10);
+        console.log(a,a*10,res);
+
+        r = document.getElementById("result");
+        odd_p = document.getElementById("odd");
+
+        r.innerHTML=res;
+        if ((res%2 == 0)&& (res%2 == 0)){
+            str = "Число - ділиться на 2 і на 3";
+        } else{
+            str = "Число - не ділиться на 2 і на 3";
+        }
+        odd_p.innerHTML = str;
+    </script>
+</body>
+</html>
