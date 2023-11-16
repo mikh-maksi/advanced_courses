@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const message = 'Mango '+'is'+' happy';
+        console.log(message); //Mango is happy
+
+        // Тепер подивимось на порядок операндів
+        let result;
+
+        result = 5 + '5';
+        console.log(result); //55
+        console.log(typeof result); //string
+
+        // Результатом додавання рядка до числа буде рядком. 
+        result = '5' + 5;
+        console.log(result); //55
+        console.log(typeof result); //string
+
+        result = 5 + '5' + 5;
+        console.log(result); //555
+        console.log(typeof result);//string
+
+        result = 5 + 5 + '5'; 
+        console.log(result); //105
+        console.log(typeof result);//string
+
+        result = 5 + 5 + 5; 
+        console.log(result); //105
+        console.log(typeof result);//number
+
+
+
+
+
+    </script>
+</body>
+</html>

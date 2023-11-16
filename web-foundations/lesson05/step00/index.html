@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Створюємо необхідні теги-->
+    a: <input type="text" id = "a"><br>
+    b: <input type="text" id = "b"><br>
+    <button id ="btn">Calculte</button>
+    <p id ="result"></p>
+    <script>
+        // Зв'язуємо змінні із елементами документу (DOM)
+        a = document.getElementById("a");
+        b = document.getElementById("b");
+        btn = document.getElementById("btn");
+        result = document.getElementById("result");
+
+
+
+        // Становлюємо подію, яка запускає дії.
+        btn.addEventListener("mouseover",fnc);
+
+        function fnc(){
+            a_value = parseInt(a.value);
+            b_value = parseInt(b.value);
+
+            result.innerHTML = a_value + b_value;
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>
