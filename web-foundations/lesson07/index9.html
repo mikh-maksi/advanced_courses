@@ -12,8 +12,8 @@
     <script>
         a = Math.random(0,10);
         
-        res = Math.floor(a*10);
-        console.log(a,a*10,res);
+        res = Math.floor(a*2023);
+        console.log(a,a*2023,res);
 
         r = document.getElementById("result");
         odd_p = document.getElementById("odd");
@@ -25,6 +25,7 @@
             str = "Число - не ділиться на 2 або на 3";
         }
         odd_p.innerHTML = str;
+        // ((Номер року ділиться на 4 ТА Номер року не ділиться  на 100)АБО Номер року ділиться на 400)
     </script>
 </body>
 </html>
