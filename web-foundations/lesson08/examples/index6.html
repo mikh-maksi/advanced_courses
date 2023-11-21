@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aa = [1,8,6,7,3];
+        console.log(aa);
+        // Алгоритм обрахунку суми
+        sum = 0;
+        n = 0;
+        for (let i = 0;i<aa.length;i+=1){
+            if (aa[i]%2 ==0){
+                console.log(aa[i]);
+                sum +=aa[i];
+                n+=1;
+            }
+            }
+
+        console.log(sum);
+
+        let avg_odd = sum / n;
+        console.log(avg_odd);
+    </script>
+</body>
+</html>
