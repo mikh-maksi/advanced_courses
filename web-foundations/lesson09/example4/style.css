@@ -10,11 +10,16 @@
     align-items: center;
     font-weight: bold;
 }
+.cell:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
 .garage{
     position: absolute;
-    top:20px;
-    left:200px;
-    width:200px;
+    top:20px;left:200px;width:200px;
     height: 200px;
     border: 1px solid black;
+}
+.container{
+    display: flex;
 }
