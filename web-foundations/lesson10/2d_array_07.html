@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="row1 row">
+        <div class="d cell" id = "d11"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+    </div>
+    <div class="row2 row">
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+
+    </div>
+    <div class="row3 row">
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+
+    </div>
+ 
+    <script>
+        let d11 = document.getElementById("d11");
+        d11.innerHTML = "O";
+        d11.addEventListener("click",change);
+        function change(){
+            console.log(d11.innerHTML=='O');
+            
+            if (d11.innerHTML=='O'){
+                d11.innerHTML='X'
+            }else{
+                d11.innerHTML='O'
+            }
+
+        }
+        // console.log(matrix);
+    </script>
+</body>
+</html>

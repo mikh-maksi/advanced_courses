@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="row1 row">
+        <div class="d cell" id = "d11"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+    </div>
+    <div class="row2 row">
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+
+    </div>
+    <div class="row3 row">
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+        <div class="d cell"></div>
+
+    </div>
+ 
+    <script>
+        let r = document.getElementsByClassName("row");
+        console.log(r);
+        console.log(r[0].children)
+
+        let matrix = [
+            [0,0,0],
+            [0,1,0],
+            [0,0,2]
+]
+
+
+        for (let i=0;i<matrix.length;i+=1){
+            let str_out ='';
+            for(let j=0;j<matrix[i].length;j+=1){
+                if (matrix[i][j]==1){
+                    r[i].children[j].innerHTML = "X";
+                }
+                if (matrix[i][j]==2){
+                    r[i].children[j].innerHTML = "O";
+                }
+            }
+            console.log("-----");
+            console.log(str_out);
+        }
+
+        
+    </script>
+</body>
+</html>
