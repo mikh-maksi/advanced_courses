@@ -16,7 +16,7 @@
     <div class="wrapper" id = "wrapper"> 
         <div class="gamefield">
             <div class="row1 row">
-                <div class="d cell"  dx = "0" dy = "0"></div>
+                <div class="d cell" id = "d11" dx = "0" dy = "0"></div>
                 <div class="d cell"  dx = "1" dy = "0"></div>
                 <div class="d cell"  dx = "2" dy = "0"></div>
             </div>
@@ -39,6 +39,9 @@
         Зараз ходить:
         <div class="d" id ="move_div">X</div>
     </div>
+    <div class="result">
+        <p class="result_out" id="result_out"></p>
+    </div>
     <script>
           let matrix = [
             [0,0,0],
@@ -47,6 +50,10 @@
 ]
         let move = "X";
         let wrapper = document.getElementById("wrapper");
+        let result_out = document.getElementById("result_out");
+
+
+
         wrapper.addEventListener("click",w);
         function w(event){
 
@@ -54,7 +61,7 @@
             console.log(element);
             let x = parseInt(element.getAttribute("dx"));
             let y = parseInt(element.getAttribute("dy"));
-            matrix[y][x] = (move=="X" ? 1 : 2);
+            matrix[x][y] = (move=="X" ? 1 : 2);
 
             console.log(matrix);
             element.classList.add('highlight');
@@ -64,13 +71,26 @@
             else if (move == "O"){ move = "X"}
             move_div = document.getElementById("move_div");
             move_div.innerHTML = move;
-
             check_matrix(matrix);
         }
         function check_matrix(m){
-            if ((m[0][0] == 1) && (m[1][1] == 1) && (m[2][2] == 1)){
-                alert("X - wins");
+            flag = 0;
+            if ((m[0][0] == 1) && (m[1][1] == 1) && (m[2][2] == 1)){flag = 1;}
+            
+            if ((m[0][0] == 1) && (m[1][0] == 1) && (m[2][0] == 1)){flag = 1;}
+            if ((m[0][1] == 1) && (m[1][1] == 1) && (m[2][1] == 1)){flag = 1;}
+            if ((m[0][2] == 1) && (m[1][0] == 1) && (m[2][2] == 1)){flag = 1;}
+
+
+            if ((m[0][0] == 1) && (m[0][1] == 1) && (m[0][2] == 1)){flag = 1;}
+            if ((m[1][0] == 1) && (m[1][1] == 1) && (m[1][2] == 1)){flag = 1;}
+            if ((m[2][0] == 1) && (m[2][1] == 1) && (m[2][2] == 1)){flag = 1;}
+
+            if (flag == 1){
+                result_out.innerHTML = "X - wins!";
             }
+
+
         }
 
     </script>
