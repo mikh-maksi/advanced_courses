@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .highlight{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id = "wrapper"> 
+          
+    <div class="row1 row">
+        <div class="d cell" id = "d11" dx = "1" dy = "1"></div>
+        <div class="d cell"  dx = "2" dy = "1"></div>
+        <div class="d cell"  dx = "3" dy = "1"></div>
+    </div>
+    <div class="row2 row">
+        <div class="d cell"  dx = "1" dy = "2"></div>
+        <div class="d cell"  dx = "2" dy = "2"></div>
+        <div class="d cell"  dx = "3" dy = "2"></div>
+
+    </div>
+    <div class="row3 row">
+        <div class="d cell"  dx = "1" dy = "3"></div>
+        <div class="d cell"  dx = "2" dy = "3"></div>
+        <div class="d cell"  dx = "3" dy = "3"></div>
+
+    </div>
+    </div>
+    <script>
+        let wrapper = document.getElementById("wrapper");
+        wrapper.addEventListener("click",w);
+        function w(event){
+            element = event.target;
+            console.log(element);
+            console.log(element.getAttribute("dx"));
+            console.log(element.getAttribute("dy"));
+            element.classList.add('highlight');
+        }
+    </script>
+</body>
+</html>

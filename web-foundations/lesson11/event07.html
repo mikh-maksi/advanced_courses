@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .highlight{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id = "wrapper"> 
+        <div class="gamefield">
+            <div class="row1 row">
+                <div class="d cell" id = "d11" dx = "0" dy = "0"></div>
+                <div class="d cell"  dx = "1" dy = "0"></div>
+                <div class="d cell"  dx = "2" dy = "0"></div>
+            </div>
+            <div class="row2 row">
+                <div class="d cell"  dx = "0" dy = "1"></div>
+                <div class="d cell"  dx = "1" dy = "1"></div>
+                <div class="d cell"  dx = "2" dy = "1"></div>
+
+            </div>
+            <div class="row3 row">
+                <div class="d cell"  dx = "0" dy = "2"></div>
+                <div class="d cell"  dx = "1" dy = "2"></div>
+                <div class="d cell"  dx = "2" dy = "2"></div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="move">
+        Зараз ходить:
+        <div class="d" id ="move_div">X</div>
+    </div>
+    <script>
+          let matrix = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+]
+        let move = "X";
+        let wrapper = document.getElementById("wrapper");
+        wrapper.addEventListener("click",w);
+        function w(event){
+
+            element = event.target;
+            console.log(element);
+            let x = parseInt(element.getAttribute("dx"));
+            let y = parseInt(element.getAttribute("dy"));
+            matrix[x][y] = (move=="X" ? 1 : 2);
+            console.log(matrix);
+            element.classList.add('highlight');
+            element.innerHTML = move;
+
+            if (move == "X"){ move = "O"}
+            else if (move == "O"){ move = "X"}
+                move_div = document.getElementById("move_div");
+                move_div.innerHTML = move;
+        }
+        function check_matrix(m){
+            
+        }
+
+    </script>
+</body>
+</html>
