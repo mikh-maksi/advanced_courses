@@ -35,6 +35,8 @@
         </div>
         
     </div>
+
+
     <div class="move">
         Зараз ходить:
         <div class="d" id ="move_div">X</div>
@@ -50,13 +52,14 @@
             console.log(element.getAttribute("dx"));
             console.log(element.getAttribute("dy"));
             element.classList.add('highlight');
+
+            move_div = document.getElementById("move_div");
             move = 1-move;
+
             if (move == 1){
-                move_div = document.getElementById("move_div");
                 move_div.innerHTML = "X";
             }
             if (move == 0){
-                move_div = document.getElementById("move_div");
                 move_div.innerHTML = "O";
             }
 
